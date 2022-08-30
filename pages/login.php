@@ -34,6 +34,16 @@ if(isset($_GET['login'])and $_GET['login'] == 'send'){
                 <div class="card bg-dark " style="border-radius: 1rem;" id="card">
                     <div class="card-body p-5 text-center">
                         <h2 style="color:white;">LOGIN</h2>
+                        <div>
+                    <?php
+                 if(isset($_GET["login"]) and $_GET["login"]=='erro' ){
+                    echo"<p><strong>Errou o email<strong></p>"; 
+                    }
+                    if(isset($_GET["senha"]) and $_GET["senha"]=='erro' ){
+                       echo"<p>Errou a senha/p>"; 
+                       }
+                ?>
+                </div>
                     <form action="">
                         <div class="form-floating mt-3">
                             <input type="text" class="form-control" id="floatingPassword" placeholder="Password" name="email">
